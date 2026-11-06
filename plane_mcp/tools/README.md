@@ -1,6 +1,6 @@
 # The tool surface
 
-**30 tools**, one per Plane resource, each taking an `action` parameter that selects the operation. 207 actions in total.
+**31 tools**, one per Plane resource, each taking an `action` parameter that selects the operation. 216 actions in total.
 
 ```python
 workitem(action="create", project_id=..., name="Fix login")
@@ -8,7 +8,7 @@ workitem(action="list", project_id=..., pql='state__group = "started"')
 cycle(action="archive", project_id=..., cycle_id=...)
 ```
 
-A compact catalogue — 30 tools, ~67k characters — loads fully in every MCP client and leaves the context budget to the conversation.
+A compact catalogue — 31 tools, ~70k characters — loads fully in every MCP client and leaves the context budget to the conversation.
 
 Five parts, in this order:
 
@@ -103,6 +103,7 @@ Where the workspace owns a resource outright, both directions of wrong-scope wri
 | `member` | `me` · `list_workspace` · `list_project` · `list_roles` · `retrieve_role` |
 | `milestone` | `list` · `retrieve` · `create` · `update` · `delete` · `list_workitems` · `manage_workitems` |
 | `module` | `list` · `retrieve` · `create` · `update` · `delete` · `list_workitems` · `manage_workitems` · `archive` · `unarchive` |
+| `module_property` | `list` · `retrieve` · `create` · `update` · `delete` · `get_values` · `set_value` · `delete_value` · `list_values` |
 | `page` | `list` · `retrieve` · `create` · `update` · `archive` · `delete` · `set_collection` · `list_workitem_pages` · `attach_to_workitem` · `detach_from_workitem` |
 | `project` | `list` · `retrieve` · `create` · `update` · `delete` · `archive` · `unarchive` · `worklog_summary` · `get_features` · `update_features` |
 | `project_estimate` | `retrieve` · `create` · `update` · `delete` · `link` · `list_points` · `create_points` · `update_point` · `delete_point` |

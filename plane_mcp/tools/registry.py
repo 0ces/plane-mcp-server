@@ -29,6 +29,7 @@ from plane_mcp.tools import (
     member,
     milestone,
     module,
+    module_property,
     page,
     project,
     project_estimate,
@@ -80,6 +81,7 @@ RESOURCES: tuple[ModuleType, ...] = (
     workspace,
     template,
     collection,
+    module_property,
 )
 
 

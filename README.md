@@ -1,5 +1,14 @@
 # Plane MCP Server
 
+> **oces fork.** Adds a `module_property` tool for the custom properties on modules in our
+> Plane fork ([0ces/plan](https://github.com/0ces/plan)): define properties (TEXT, DATETIME,
+> DECIMAL, BOOLEAN, OPTION, RELATION to users/work items/modules, URL, EMAIL), set and clear a
+> module's values, and read the computed progress/points block. Install:
+>
+> ```bash
+> uvx --from git+https://github.com/0ces/plane-mcp-server@oces-v0.3.5-1 plane-mcp-server stdio
+> ```
+
 A [Model Context Protocol](https://modelcontextprotocol.io) server for
 [Plane](https://plane.so). Gives an AI agent tools to read and manage projects,
 work items, cycles, modules, releases, customers and more.
@@ -7,7 +16,7 @@ work items, cycles, modules, releases, customers and more.
 Built on [FastMCP](https://github.com/jlowin/fastmcp) and the official
 [`plane-sdk`](https://pypi.org/project/plane-sdk/).
 
-- **30 tools**, one per Plane resource, covering 207 operations
+- **31 tools**, one per Plane resource, covering 216 operations
 - **Local or remote** — stdio, streamable HTTP, SSE
 - **OAuth or API key** authentication
 
@@ -98,7 +107,7 @@ HTTP transport instead.
 
 ## Tools
 
-The server advertises 30 tools, one per resource. Each takes an `action`
+The server advertises 31 tools, one per resource. Each takes an `action`
 parameter that selects the operation:
 
 ```python
